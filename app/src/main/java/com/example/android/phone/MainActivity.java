@@ -3,14 +3,14 @@ package com.example.android.phone;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
-import static com.example.android.phone.R.id.view_number;
 
 public class MainActivity extends AppCompatActivity {
     int number = 0 ;
     String letter = " " ;
-    int[] num = new int[11] ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -127,14 +127,19 @@ public class MainActivity extends AppCompatActivity {
      * Displays the Number .
      */
     public void displayNumber(int number ) {
-        TextView scoreView = (TextView) findViewById(view_number);
-        scoreView.setText(String.valueOf(number ));
+       /**
+        *  TextView scoreView = (TextView) findViewById(view_number);
+        *scoreView.setText(String.valueOf(number ));
+        */
+       TextView phoneNumber = (TextView) findViewById(R.id.text_view) ;
+        String phone = phoneNumber.getText().toString() ;
+
     }
     /**
      * Displays the letter .
      */
     public void displayLetter(String letter) {
-        TextView scoreView = (TextView) findViewById(view_number);
+        TextView scoreView = (TextView) findViewById(R.id.text_view);
         scoreView.setText(String.valueOf(letter));
     }
 
